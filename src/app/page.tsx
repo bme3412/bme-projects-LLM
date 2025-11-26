@@ -107,22 +107,13 @@ export default function Home() {
             <h1 className="hero-title">
               👋 Hi, I&apos;m Brendan. Trained on finance, fine-tuned for AI. Ready to build
             </h1>
-            <p className="bio-copy">
-              I am a senior analyst for a $5 billion Global Technology equity strategy by day, and an LLM coder on nights and weekends. Looking for my next career adventure.
-            </p>
-            <div className="bio-cta-row">
-              <p className="bio-subline">
-                Take a look at some of my AI projects, all built with Anthropic APIs.
-              </p>
-              <a
-                className="resume-button"
-                href="/Brendan_Erhard_Resume.pdf"
-                download
-                target="_blank"
-                rel="noreferrer"
-              >
-                Download Resume
-              </a>
+            <div className="bio-copy">
+              <p>Senior Analyst, Global Technology Equity Strategy</p>
+              <br />
+              <p>By day: Analyzing $5B in tech investments</p>
+              <p>By night: Building AI tools with Claude & Next.js</p>
+              <br />
+              <p>Looking for my next adventure in AI engineering</p>
             </div>
           </div>
 
