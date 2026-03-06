@@ -61,13 +61,14 @@ export default function Home() {
             <div className="bio-copy">
               <p>Senior Analyst covering $5B in global tech investments — building AI tools with LLMs, Python, and Next.js on the side.</p>
               <p>Looking for my next role in AI engineering.</p>
+              <p className="bio-tagline">Welcome to my AI/LLM project portfolio.</p>
             </div>
           </div>
 
           <div className="bio-cta-area">
             <a
               className="resume-cta"
-              href="https://drive.google.com/file/d/1sEp1WH1RIvPxST0nEkXRmYqLmm3g-a8b/view"
+              href="/Brendan-Erhard-Resume-3.2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

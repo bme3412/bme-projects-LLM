@@ -33,21 +33,21 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Cursor IR Agent",
-    href: "https://cursor-ir-agent.vercel.app",
-    githubUrl: "https://github.com/bme3412/cursor-ir-agent",
-    iconKey: "layers",
+    title: "Equity Research Agent",
+    href: "https://bme-equity-research-agent.vercel.app",
+    githubUrl: "https://github.com/bme3412/equity-research-agent",
     details: {
       summary:
-        "AI agent for institutional equity research — automates the extraction, analysis, and synthesis of earnings transcripts, IR presentations, and SEC filings into institutional-quality initiation reports with a 6-phase deterministic reality-check pipeline.",
-      builtWith: "Python, FastAPI, React, TypeScript, Gemini 2.5, Claude Opus 4.6, SEC XBRL API",
+        "Multi-agent system that processes earnings transcripts, IR decks, and SEC filings into institutional-quality initiation reports. Features a 6-phase reality-check pipeline with truth-tagged metrics, kill-switch thresholds, and deterministic claim verification.",
+      builtWith:
+        "Python 3.12, FastAPI, React 19, TypeScript, Gemini 2.5 Flash/Pro, Claude Sonnet 4.6 (streaming + extended thinking), SEC XBRL API, Financial Modeling Prep API, openpyxl, PyMuPDF, Zustand, TanStack Query",
       problem:
-        "Institutional equity research requires reading hundreds of pages of earnings transcripts, SEC filings, and investor presentations every quarter — all manually. Even then, LLM-generated financial analysis fails in predictable ways: unverifiable claims presented as fact, promotional tone, and internal inconsistencies.",
+        "Institutional equity research requires manually processing hundreds of pages of earnings transcripts, SEC filings, and investor presentations every quarter. LLM-generated financial analysis compounds this with its own failure modes: unverifiable claims presented as fact, promotional tone, internal inconsistencies, and no audit trail — making raw LLM output unsuitable for institutional use.",
       modalDetail:
-        "Built a multi-stage coverage pipeline: Discovery → Parsing (Schema 1/2) → Quarterly Assessment (Schema 3) → Rolling Thesis (Schema 4, activates at Q5) → Initiation Report. The initiation generator includes a 6-phase Reality Check system: deterministic sanity checks (YoY math, margin reconciliation, kill-switches), LLM claim cross-examination, and a post-processor that enforces rating downgrades and bans promotional language. Every number in the output carries a truth tag: [Reported], [MgmtStated], [Derived], or [Assumption]. Currently tracks AAPL, AMZN, BKNG, CRM, GOOGL, MDB, MSFT, NFLX, NVDA, TSLA.",
+        "Built a five-stage additive coverage pipeline — Discovery → Parsing → Quarterly Assessment → Rolling Thesis (activates at Q5) → Initiation Report — where each quarter's data compounds into a richer thesis. Transcripts are auto-fetched from the FMP API and run through four parallel extraction functions (guidance, numbers, sentiment, risks), each using a focused prompt optimized for that data type rather than a single mega-prompt.\n\nThe initiation report generator runs a 6-phase Reality Check System before, during, and after LLM generation. Phase 0 classifies the business model archetype (e.g. ota_marketplace, b2b_saas, ads_platform) and loads the corresponding Reality Check Spec — defining north-star KPIs, kill-switch thresholds, and margin expectations for that archetype. Subsequent phases run deterministic sanity checks (YoY math verification, margin reconciliation within 2pp), LLM claim cross-examination that generates alternative explanations for every positive management claim, and a structural audit for omitted metrics and peer data gaps. A post-processor enforces rating downgrades (Buy → Hold) and conviction changes when kill-switches fire — it rewrites the report header deterministically rather than relying on the model obeying a soft instruction. Every number in the output carries a truth tag: [Reported], [MgmtStated], [Derived], or [Assumption]. Coverage universe: AAPL, AMZN, BKNG, CRM, GOOGL, MDB, MSFT, NFLX, NVDA, ON, TSLA.",
       impact:
-        "Generates 3,500–4,500 word institutional-quality initiation reports with auditable, truth-tagged metrics. Kill-switch enforcement deterministically rewrites ratings when quality thresholds are violated — the system doesn't rely on the model obeying soft instructions.",
-      screenshots: [],
+        "Generates 3,500–4,500 word initiation reports with full audit trails, truth-tagged metrics, and Bull/Base/Bear scenario modeling with explicit EPS math. The SSE streaming architecture delivers real-time text deltas for Anthropic and a full-report event for Gemini — with a ThreadPoolExecutor preventing async loop blocking. Deployed on Render (backend) and Vercel (frontend) with Excel model export via XBRL CompanyFacts data.",
+      screenshots: ["/equity-research-agent.png"],
     },
   },
   {
@@ -65,7 +65,7 @@ export const projects: Project[] = [
         "Built a hybrid search pipeline combining Voyage voyage-3.5 dense embeddings (1024-dim) with BM25 sparse vectors over 11,929 indexed chunks from 571 transcript files. Claude uses tool-use to dynamically select between structured financial queries (get_financial_metrics), semantic transcript search, and growth rate calculations depending on query type. Responses stream token-by-token via SSE with citations and source scores.",
       impact:
         "60% reduction in research preparation time. Hybrid search achieves faithfulness 0.85 / relevance 0.88 — a ~7pp lift over dense-only baseline. Time to first token ~1.5s. Covers AAPL, AMD, AMZN, AVGO, CRM, GOOGL, META, MSFT, NVDA, ORCL across FY2020–FY2025.",
-      screenshots: [],
+      screenshots: ["/clarity-llm.png"],
     },
   },
   {
@@ -119,7 +119,7 @@ export const projects: Project[] = [
         "Built three coordinated AI agents on Claude Opus 4.6: a Research Agent that searches live government sources for corridor-specific requirements, a Document Intelligence Agent that reads uploaded documents in any language using vision and cross-references them for contradictions, and an Advisory Agent that synthesizes findings into prioritized, actionable fixes. Results stream in real time via SSE. Covers all 37,830 global travel corridors and reads documents in 40+ languages. Built for the Anthropic Claude Code Hackathon.",
       impact:
         "Selected for the Anthropic Claude Code Opus 4.6 Hackathon — 500 participants from 13,000 applicants. Demo catches real cross-lingual contradictions: a Hindi employment certificate stating ₹85K/month while the English cover letter shows a different salary and employment type — exactly the kind of contradiction that triggers visa denials.",
-      screenshots: [],
+      screenshots: ["/traverse.png"],
     },
   },
   {
