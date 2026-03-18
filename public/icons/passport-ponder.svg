@@ -1,0 +1,33 @@
+<svg width="420" height="260" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="260" rx="20" fill="#F4F0E7"/>
+  <rect x="20" y="24" width="380" height="60" rx="12" fill="#FFFFFF" stroke="#D9CEC0"/>
+  <rect x="32" y="36" width="140" height="12" rx="6" fill="#E0D6C9"/>
+  <rect x="32" y="54" width="96" height="10" rx="5" fill="#F4B282"/>
+  <circle cx="360" cy="54" r="12" fill="#1E7FF5" opacity="0.8"/>
+  <circle cx="330" cy="54" r="12" fill="#10A38A" opacity="0.6"/>
+
+  <rect x="20" y="102" width="180" height="128" rx="14" fill="#FFFFFF" stroke="#D9CEC0"/>
+  <rect x="32" y="114" width="156" height="64" rx="10" fill="#E7EEF9"/>
+  <path d="M44 146C62 132 110 126 140 146" stroke="#1E7FF5" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="70" cy="136" r="6" fill="#FF8A3C"/>
+  <circle cx="132" cy="144" r="6" fill="#10A38A"/>
+  <rect x="32" y="186" width="72" height="12" rx="6" fill="#E0D6C9"/>
+  <rect x="32" y="206" width="104" height="10" rx="5" fill="#D5E3FA"/>
+
+  <rect x="220" y="102" width="180" height="60" rx="14" fill="#FFFFFF" stroke="#D9CEC0"/>
+  <rect x="232" y="114" width="100" height="12" rx="6" fill="#E0D6C9"/>
+  <rect x="232" y="134" width="140" height="10" rx="5" fill="#FBE0CE"/>
+
+  <rect x="220" y="176" width="84" height="54" rx="12" fill="#FFFFFF" stroke="#D9CEC0"/>
+  <rect x="232" y="188" width="60" height="8" rx="4" fill="#E0D6C9"/>
+  <rect x="232" y="204" width="48" height="8" rx="4" fill="#D5E3FA"/>
+
+  <rect x="316" y="176" width="84" height="54" rx="12" fill="#FFFFFF" stroke="#D9CEC0"/>
+  <rect x="328" y="188" width="60" height="8" rx="4" fill="#E0D6C9"/>
+  <rect x="328" y="204" width="48" height="8" rx="4" fill="#FBE0CE"/>
+
+  <path d="M316 120L384 120" stroke="#10A38A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M324 130L392 130" stroke="#1E7FF5" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <path d="M332 140L380 140" stroke="#FF8A3C" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+</svg>
+
