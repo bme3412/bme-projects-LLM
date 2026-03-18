@@ -39,7 +39,7 @@ export const projects: Project[] = [
     iconKey: "chart",
     details: {
       summary:
-        "ML-powered NCAA tournament bracket predictor using a 3-model ensemble (Logistic Regression, XGBoost, LightGBM) with Monte Carlo simulation. Trained on 73 datasets including 5.8M rows of historical data, KenPom ratings, and FiveThirtyEight projections.",
+        "ML-powered NCAA bracket predictor using a 3-model ensemble with Monte Carlo simulation. Trained on 5.8M rows of historical data across 73 datasets.",
       builtWith: "Next.js, Python, scikit-learn, XGBoost, LightGBM, pandas, NumPy, Kaggle API",
       problem:
         "March Madness brackets are notoriously unpredictable — most people rely on gut feelings, team loyalty, or surface-level stats. There's no accessible tool that combines rigorous ML modeling with an interactive bracket experience.",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
         "Built a 3-model ensemble using inverse-Brier weighting: Logistic Regression (69.4% accuracy, 36.2% weight), XGBoost (67.2%, 32.1% weight), and LightGBM (66.8%, 31.7% weight). Engineered 91 features including offensive/defensive efficiency per 100 possessions, margin-of-victory adjusted Elo ratings with 33% season regression, and recent performance metrics. Validated using Leave-One-March-Out cross-validation across 17 tournament years (2008-2025, excluding 2020). Monte Carlo simulation runs 10,000 tournaments to generate championship and Final Four probabilities. Data pipeline integrates 73 datasets: 35 Kaggle CSVs plus 38 external sources (KenPom, Barttorvik, FiveThirtyEight, Heat Check, AP polls).",
       impact:
         "Generates pairwise matchup probabilities, championship odds, and Final Four advancement rates backed by 5.8M rows of historical data. The ensemble achieves a Brier score of 0.198 on the best-performing model — competitive with top Kaggle submissions.",
-      screenshots: ["/screenshots/march-madness-preview.png"],
+      screenshots: ["/screenshots/march-madness-2026.png"],
     },
   },
   {
